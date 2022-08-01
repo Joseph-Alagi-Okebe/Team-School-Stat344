@@ -1,3 +1,13 @@
+body {
+    border: 5px solid black;
+    margin: 0%;
+  padding: 0px;
+  align-content: center;
+  
+}
+html{
+  width: 100%;
+}
 .grid-container{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -14,12 +24,11 @@ div {
     border: 3px solid floralwhite;
 }
 
-/* html{
-    background-color:pink;
-} */
 
 img{
-    border-radius: 20%;
+    border-radius: 18%;
+  image-orientation:0grad;
+  
 }
 .title{
     text-align: center;
@@ -33,6 +42,7 @@ img{
 
 h1{
     text-align: center;
+  margin:0px;
 }
 
 h2{
@@ -43,7 +53,7 @@ table{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 60%;
     height: 10px;
 }
 
