@@ -1,13 +1,18 @@
-body {
-    border: 5px solid black;
-    margin: 0%;
+
+body{
+  background-image: url("Backgroundimg.jpg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
+  height:100%;
+  border: 5px solid black;
+  margin: 0%;
   padding: 0px;
   align-content: center;
-  
 }
-html{
-  width: 100%;
-}
+
 .grid-container{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -21,14 +26,14 @@ html{
 }
 
 div {
-    border: 3px solid floralwhite;
+/*     border: 3px solid floralwhite; */
+  border-inline: inherit;
 }
 
 
 img{
     border-radius: 18%;
   image-orientation:0grad;
-  
 }
 .title{
     text-align: center;
@@ -37,16 +42,24 @@ img{
     border: 20px;
     margin: auto;
     padding: 10px;
+  text-decoration-thickness: 20px;
 }
 
 
 h1{
+  color: white;
     text-align: center;
   margin:0px;
+  text-decoration-thickness: 20px;
 }
 
 h2{
     color: #7b3433;
+}
+h3{
+  color: wheat;
+  text-emphasis-color: black;
+  text-decoration-thickness: 20px;
 }
 
 table{

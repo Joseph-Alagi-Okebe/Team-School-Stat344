@@ -19,21 +19,23 @@ document.querySelectorAll('th.order').forEach(th_elem => {
     span_elem.innerHTML = '▼'
     th_elem.appendChild(span_elem)
     th_elem.classList.add('order-inactive')
-
+// JS instructions to target the th_element with the class .order
     const index = Array.from(th_elem.parentNode.children).indexOf(th_elem)
-    th_elem.addEventListener('click', (e) => {
+    th_elem.addEventListener('click', () => {
       document.querySelectorAll('th.order').forEach(elem => {
         elem.classList.remove('order-active')
         elem.classList.add('order-inactive')
       })
       th_elem.classList.remove('order-inactive')
       th_elem.classList.add('order-active')
-
+      
+// JS instruction to indicate the asc or desc order
       if (!asc) {
         th_elem.querySelector('span').innerHTML = '▲'
       } else {
         th_elem.querySelector('span').innerHTML = '▼'
       }
+      // JS instructions to target the tbodies(column to be sorted using comparison function)
       const arr = Array.from(th_elem.closest("table").querySelectorAll('tbody tr'))
       arr.sort((a, b) => {
         const a_val = a.children[index].innerText
@@ -55,17 +57,4 @@ export default startApp;
 // ======= EEND DO NOT EDIT ========= //
 
 
-// function sortTableByColumn(table, column, asc = true) {
-//   const dirModifier = asc ? 1 : -1;
-//   const tBody = table.tBodies[0];
-//   const rows = Array.from(tBody.querySelectorAll("tr"));
-
-//   //sort each row
-//   const sortedRows = rows.sort((a, b) => {
-//     const aColText = a.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
-//     const bColText = b.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
-//     return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier)
-//   });
-// }
-// sortTableByColumn(document.querySelector("table"), 1, false);
 
